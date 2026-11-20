@@ -1,55 +1,51 @@
-# Mintlify Starter Kit
+# NavBot documentation
 
-Use the starter kit to get your docs deployed and ready to customize.
+The NavBot documentation site uses Mintlify and MDX. Its introduction and product links are based on the [NavBot website](https://navbot.com/).
 
-Click the green **Use this template** button at the top of this repo to copy the Mintlify starter kit. The starter kit contains examples with
+## Content
 
-- Guide pages
-- Navigation
-- Customizations
-- API reference pages
-- Use of popular components
+- `docs.json`: site name, theme, navigation, branding, and support links.
+- `index.mdx`: NavBot introduction and product families.
+- `quickstart.mdx`: product selection and support resources.
+- `logo/`, `favicon.png`, and `images/`: official NavBot brand and product assets.
 
-**[Follow the full quickstart guide](https://starter.mintlify.com/quickstart)**
+Product questions and support requests go to [sales@navbot.com](mailto:sales@navbot.com).
 
-## AI-assisted writing
+## Local preview
 
-Set up your AI coding tool to work with Mintlify:
+Install Node.js 20.17 or later using a Mintlify-supported LTS release, then install the CLI:
 
 ```bash
-npx skills add https://mintlify.com/docs
-```
-
-This command installs Mintlify's documentation skill for your configured AI tools like Claude Code, Cursor, Windsurf, and others. The skill includes component reference, writing standards, and workflow guidance.
-
-See the guides for [Claude Code](https://www.mintlify.com/docs/guides/claude-code), [Codex](https://www.mintlify.com/docs/guides/codex), [Cursor](https://www.mintlify.com/docs/guides/cursor), and [Devin Desktop](https://www.mintlify.com/docs/guides/devin-desktop) for tool-specific setup.
-
-## Development
-
-Install the [Mintlify CLI](https://www.npmjs.com/package/mint) to preview your documentation changes locally. To install, use the following command:
-
-```
 npm i -g mint
 ```
 
-Run the following command at the root of your documentation, where your `docs.json` is located:
+From the directory containing `docs.json`, run:
 
-```
+```bash
 mint dev
 ```
 
-View your local preview at `http://localhost:3000`.
+Open the local URL printed by the CLI, normally `http://localhost:3000`.
 
-## Publishing changes
+## Check changes
 
-Install our GitHub app from your [dashboard](https://dashboard.mintlify.com/settings/organization/github-app) to propagate changes from your repo to your deployment. Changes are deployed to production automatically after pushing to the default branch.
+```bash
+mint validate
+mint broken-links
+```
 
-## Need help?
+To check the current CLI guidance, run `mint instructions`. If your installed version does not support it, use `npx mint@latest instructions`.
 
-### Troubleshooting
+## Publishing
 
-- If your dev environment isn't running: Run `mint update` to ensure you have the most recent version of the CLI.
-- If a page loads as a 404: Make sure you are running in a folder with a valid `docs.json`.
+Connect this repository to the separate NavBot project in Mintlify and install the Mintlify GitHub App for this repository. Changes pushed to the configured deployment branch trigger a new deployment. Review the result in the project's **Publishes** page.
 
-### Resources
-- [Mintlify documentation](https://mintlify.com/docs)
+## Content sources
+
+- [NavBot](https://navbot.com/)
+- [About NavBot](https://navbot.com/pages/about)
+- [Kinatric D2](https://navbot.com/products/kinatric-d2)
+- [Kinatric D2W](https://navbot.com/products/kinatric-d2w)
+- [NavBot FAQ](https://navbot.com/pages/faq)
+
+The local logo, favicon, and Kinatric D2 image are sourced from the official website. Keep model specifications and setup instructions tied to the relevant product's published resources.
